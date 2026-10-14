@@ -1,0 +1,6 @@
+{
+  "name": "WALL-E & EVE's Signal — Autonomous AI Agent",
+  "description": "Autonomous perception-planning-action AI agent with Bayesian belief updating, A* path planning, resource safety management, and transparent decision tracing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
