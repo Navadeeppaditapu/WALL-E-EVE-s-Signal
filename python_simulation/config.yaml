@@ -1,0 +1,27 @@
+# WALL-E and EVE's Signal - settings. Change numbers here, not in the code.
+
+grid:
+  rows: 10
+  cols: 10
+  base: [0, 0]            # charging base (row, col); WALL-E starts here
+
+battery:
+  start: 100              # starting charge
+  move_cost: 1            # cost of one step up/down/left/right
+  ping_cost: 1            # cost of a ping (noisy "EVE is nearby" clue)
+  scan_cost: 2            # cost of a scan (checks only WALL-E's own cell)
+  safety_margin: 2        # extra charge always kept on top of the trip home
+
+sensor:
+  ping_radius: 3          # a ping can fire if EVE is within this many steps
+  ping_p_detect_near: 0.8 # chance ping fires when EVE is within the radius
+  ping_p_false_alarm: 0.1 # chance ping fires when EVE is outside the radius
+  scan_p_detect: 0.9      # chance a scan finds EVE when she IS in the cell
+
+policy:
+  find_bonus: 6.0         # how much WALL-E values a chance of actually finding EVE
+  lookahead_discount: 0.9 # moving toward a better spot is valued slightly less
+
+simulation:
+  max_steps: 150          # time limit
+  seed: 7                 # same seed = same run (reproducible)
